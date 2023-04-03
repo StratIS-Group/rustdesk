@@ -6,6 +6,7 @@ on:
       upload-artifact:
         type: boolean
         default: true
+  workflow_dispatch:
 
 env:
   LLVM_VERSION: "15.0.6"
