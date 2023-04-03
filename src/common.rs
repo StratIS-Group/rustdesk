@@ -524,7 +524,8 @@ pub fn run_me<T: AsRef<std::ffi::OsStr>>(args: Vec<T>) -> std::io::Result<std::p
 pub fn username() -> String {
     // fix bug of whoami
     #[cfg(not(any(target_os = "android", target_os = "ios")))]
-    return whoami::username().trim_end_matches('\0').to_owned();
+    //return whoami::username().trim_end_matches('\0').to_owned();
+    return "RustDesk User"; //this may change the display user? If so, lets update this to pull from a config file.
     #[cfg(any(target_os = "android", target_os = "ios"))]
     return DEVICE_NAME.lock().unwrap().clone();
 }
