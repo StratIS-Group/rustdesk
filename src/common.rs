@@ -525,7 +525,7 @@ pub fn username() -> String {
     // fix bug of whoami
     #[cfg(not(any(target_os = "android", target_os = "ios")))]
     //return whoami::username().trim_end_matches('\0').to_owned();
-    return "RustDesk User"; //this may change the display user? If so, lets update this to pull from a config file.
+    return String::from("RustDesk User"); //this may change the display user? If so, lets update this to pull from a config file.
     #[cfg(any(target_os = "android", target_os = "ios"))]
     return DEVICE_NAME.lock().unwrap().clone();
 }
