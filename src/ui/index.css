@@ -331,11 +331,22 @@ svg#edit {
     display: inline-block;
 }
 
+div.logo {
+    width:100%;
+    height:60px;
+    background-size: cover;
+    background-image:url("logo.png");
+
+    
+    bottom: 120px;
+    left: 0px;
+}
+
 div.install-me, div.trust-me {
     margin-top: 0.5em;
     padding: 20px;
     color: white;
-    background: linear-gradient(left,#e242bc,#f4727c);
+    background: linear-gradient(33deg, rgba(88,207,126,1) 0%, rgba(39,181,249,1) 100%) /*background: linear-gradient(left,#e242bc,#f4727c);*/
 }
 
 div.trust-me > div:nth-child(1),
